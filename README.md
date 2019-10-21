@@ -14,22 +14,9 @@ Vamos aos primeiros passos da configuração.
         'charset' => 'utf8'
     )
     
-2 - Setando dados de envio de email 
-    No array $settings['email']; atribua os dados da conta de acesso ao email
-    $settings['email'] array(
-        'smtpSettings' => array (
-        'host' => 'seu.host.com',
-        'port' => 587,
-        'requireAuth' => true,
-        'requireSSL' => false,
-        'username' => 'hots_username',
-        'password' => 'host_senha'
-      )
-    )
+2 - Crie o Banco de dados jw_shop
 
-3 - Crie o Banco de dados jw_shop
+3 - Carregue o arquivo jw_shop.sql para popular o banco
 
-4 - Carregue o arquivo jw_shop.sql para popular o banco
-
-5 - Pra logar clique no botão login e escolha na caixa de seleção um dos usuários pre cadastrados apenas para teste.
+4 - Pra logar clique no botão login e escolha na caixa de seleção um dos usuários pre cadastrados apenas para teste.
 
