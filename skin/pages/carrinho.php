@@ -39,9 +39,17 @@ if ($currentUser['id']) {
 
     default:
       ?>
-      <h2>Meu carrinho</h2>
-      <div class="row">
-        <div class="col-12">
+      <h2 class="text-left">Meu carrinho</h2>
+      <table class="table table-borderless">
+        <tbody>
+          <td>
+            <a href="<?php echo $basePath; ?>" class="btn btn-info btn-sm float-left" role="button">Continuar comprando</a>
+          </td>
+          <td>
+            <a href="<?php echo $basePath; ?>" class="btn btn-danger btn-sm float-right abortDT" role="button">Concluir a compra</a>
+          </td>
+        </tbody>
+      </table>
       <table class="table table-striped">
         <thead class="thead-dark">
           <tr>
@@ -86,44 +94,63 @@ if ($currentUser['id']) {
           ?>
         </tbody>
       </table>
-        </div>
-      </div>
 
-      <div class="row mb-2">
-        <div class="col-8">&nbsp;</div>
-        <div class="col-2 bg-light">
-          Subtotal dos produtos
-        </div>
-        <div class="col-2 bg-light">
-          <p class="text-right">
-            <?php echo pricetValue($requestUser['payment_value']); ?>
-          </p>
-        </div>
-      </div>
+      <table class="table table-borderless">
+        <tbody>
+          <tr>
+            <td colspan="3" width="65%"></td>
+            <td class="table-info">
+              <p class="text-right">
+                Subtotal dos produtos
+              </p>
+            </td>
+            <td class="table-info">
+              <p class="text-right">
+                <?php echo pricetValue($requestUser['payment_value']); ?>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3"></td>
+            <td class="table-info">
+              <p class="text-right">
+                Subtotal frete
+              </p>
+            </td>
+            <td class="table-info">
+              <p class="text-right">
+                <?php echo pricetValue($requestUser['payment_freight']); ?>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3"></td>
+            <td class="table-secondary">
+              <p class="text-right">
+                <strong>Valor Total</strong>
+              </p>
+            </td>
+            <td class="table-secondary">
+              <p class="text-right">
+                <strong><?php echo pricetValue($requestUser['payment_amount']); ?></strong>
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
-      <div class="row mb-2">
-        <div class="col-8">&nbsp;</div>
-        <div class="col-2 bg-light">
-          Subtotal frete
-        </div>
-        <div class="col-2 bg-light">
-          <p class="text-right">
-            <?php echo pricetValue($requestUser['payment_freight']); ?>
-          </p>
-        </div>
-      </div>
-
-      <div class="row mb-2">
-        <div class="col-8">&nbsp;</div>
-        <div class="col-2 bg-secondary">
-          <strong>Valor Total</strong>
-        </div>
-        <div class="col-2 bg-secondary">
-          <p class="text-right">
-            <strong><?php echo pricetValue($requestUser['payment_amount']); ?></strong>
-          </p>
-        </div>
-      </div>
+      <table class="table table-borderless">
+        <tbody>
+          <tr>
+            <td>
+              <a href="<?php echo $basePath; ?>" class="btn btn-info btn-sm float-left" role="button">Continuar comprando</a>
+            </td>
+            <td>
+              <a href="<?php echo $basePath; ?>" class="btn btn-danger btn-sm float-right abortDT" role="button">Concluir a compra</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
       <?php
       break;

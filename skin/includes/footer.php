@@ -58,7 +58,7 @@
                       <input class="form-control input-sm" type="password" name="password" id="password" size="20" placeholder="Senha" autocomplete="off" value="" />
                     </div>
                     <div class="form-group">
-                      <button type="button" class="btn btn-block btn-sm btn-default pull-right btn-js" id="doLogin" data-form="loginForm">Logar</button>
+                      <button type="button" class="btn btn-block btn-sm btn-secondary pull-right btn-js" id="doLogin" data-form="loginForm">Logar</button>
                     </div>
                   </div>
                   <div class="col-md-3 col-md-offset-1">

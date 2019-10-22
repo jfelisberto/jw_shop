@@ -23,19 +23,16 @@
         <?php
       }
       ?>
+    </ul>
 
-      <li class="nav-item">
-      <form class="form-inline">
-        <div class="input-group mb-3">
-          <input id="searchPrd" name="term" class="form-control" type="search" placeholder="Busca" aria-label="Busca">
-          <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="button" id="button-search">Buscar</button>
-          </div>
+    <form class="form-inline my-2 my-lg-0">
+      <div class="input-group mb-2">
+        <input id="searchPrd" name="term" class="form-control" type="search" placeholder="Busca" aria-label="Busca">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" id="button-search">Buscar</button>
         </div>
-      </form>
-      </li>
-
-      <li class="nav-item">
+      </div>
+      <div class="input-group">
         <?php
         if ($currentUser['id'] >= 1) {
           if ($currentUser['gender'] == 'F') {
@@ -65,15 +62,11 @@
           <?php
         }
         ?>
-      </li>
-
-      <li class="nav-item">
+      </div>
+      <div class="input-group">
         <a class="btn btn-sm btn-default" href="<?php echo "{$basePath}carrinho"; ?>">
           <i class="fab fa-opencart fa-fw fa-2x"></i><br />Carrinho
-        </a>
-      </li>
-    </ul>
-
-    </span>
+      </div>
+    </form>
   </div>
 </nav>
